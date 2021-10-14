@@ -1,0 +1,160 @@
+/* Global Resets */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Red Hat Display', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    width: 100%;
+    height: 100vh;
+
+    background: url(./images/pattern-background-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+/* Order Cards */
+
+.order__container {
+    display: flex;
+    flex-direction: column;
+    width: 450px;
+    background-color: #f5f5f5;
+    border-radius: 20px;
+    box-shadow: 0px 0px 32px -17px rgba(13,13,13,.7);
+}
+
+.order__container a {
+    margin: 0 auto;
+}
+
+.order__hero--img {
+    border-radius: 20px 20px 0 0;
+}
+
+.order__headline {
+    text-align: center;
+    padding: 50px 50px 20px 50px;
+}
+
+.order__headline h1 {
+    color: hsl(223, 47%, 23%);
+    font-size: 1.8rem;
+    padding-bottom: 15px;
+}
+
+.order__headline p {
+    color: hsl(224, 23%, 55%);
+    line-height: 1.5;
+}
+
+.order__plan {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: hsl(225, 100%, 98%);
+    width: 80%;
+    margin: 0 auto 20px auto;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.order__plan a {
+    color: hsl(224, 32%, 73%);
+    text-decoration: none;
+    transition: all .4s ease-in-out;
+}
+
+.order__plan a:hover {
+    color: hsl(223, 47%, 23%);
+}
+
+.order__plan--text {
+    margin-left: 30px;
+}
+
+.order__plan--text h2 {
+    color: hsl(223, 47%, 23%);
+    font-size: 1.1rem;
+}
+
+.order__plan--text p {
+    color: hsl(224, 23%, 55%);
+}
+
+#order__plan--confirm {
+    padding: 15px 100px;
+    font-weight: 700;
+    border-radius: 15px;
+    text-decoration: none;
+    color: hsl(225, 100%, 98%);
+    background-color: hsl(245, 75%, 52%);
+    transition: all .3s ease-in-out;
+}
+
+#order__plan--confirm:hover {
+    transform: translateY(-5px);
+    background-color: hsl(245, 55%, 42%);
+    box-shadow: 0px 10px 32px -13px rgba(31,39,59,1);
+}
+
+#order__plan--cancel {
+    text-decoration: none;
+    font-weight: 700;
+    color: hsl(224, 23%, 55%);
+    padding: 30px 0;
+    transition: all .3s ease-in-out;
+}
+
+#order__plan--cancel:hover {
+    color: hsl(224, 26%, 37%);
+}
+
+.attribution {
+    margin-top: 50px;
+    color: hsl(224, 23%, 55%);
+}
+
+@media only screen and (max-width: 375px) {
+    body {
+        background: url(./images/pattern-background-mobile.svg);
+        background-repeat: no-repeat;
+        background-size: contain; 
+    }
+
+    .order__container {
+        width: 340px;
+    }
+
+    .order__hero--img {
+        width: 340px;
+    }
+
+    .order__headline {
+        padding: 40px 40px 20px 40px;
+    }
+    
+    .order__plan--text {
+        margin-left: 10px;
+    }
+
+    .order__plan a {
+        font-size: .8rem;
+    }
+
+    #order__plan--confirm {
+        padding: 15px 60px;
+    }
+
+    .attribution {
+        display: none;
+    }
+}
